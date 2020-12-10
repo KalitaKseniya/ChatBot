@@ -1,0 +1,63 @@
+﻿@model IEnumerable<ChatBot.Models.Chat>
+@{
+    ViewBag.Title = "Chat";//IEnumerable<path>
+    Layout = null;
+}
+
+@ViewBag.i
+<style>
+    .formStyle {
+        background: #fc3;
+        border: 3px solid black;
+        margin-left:400px;
+        height: 500px;
+        width: 300px;
+        overflow-y: auto;
+        /*display: inline-block;*/
+    }
+</style>
+@using (Html.BeginForm("HandleButtonClick", "Chat", FormMethod.Post, new { id="formID", @class="formStyle" }))
+{
+//    <fieldset>
+    foreach (var item in Model)
+    {
+    <p align="right">@item.BotResponse</p>
+    if (item == ViewBag.NextSelected)
+    {
+    <button type="submit" name="mine" value=@item.Id>
+        <p align="left">@item.UserRequest</p>
+    </button>
+    break;
+    }
+    <p align="left">@item.UserRequest</p>
+    }
+    
+}
+
+
+<br />
+@*<label> Mensagem :</label> <input type="text" id="mensagem" style="width:500px" />
+    <input id="Enviar" type="button" value="Enviar" />*@
+
+
+@*<table>
+        <tr>
+            <th>
+                Request
+            </th>
+            <th>
+                Response
+            </th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.UserRequest
+                </td>
+                <td>
+                    @item.BotResponse
+                </td>
+            </tr>
+        }
+    </table>*@
