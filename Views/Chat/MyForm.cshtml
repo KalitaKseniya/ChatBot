@@ -1,0 +1,7 @@
+﻿@*@model IEnumerable<ChatBot.Models.Chat>*@
+<div id="myresults">
+    <p align="center" class="txtBoxStyle">@ViewBag.NextSelected.BotResponse</p>
+    <button style="float: right;" type="submit" name="mine" value=@ViewBag.NextSelected.Id class="btnStyle">
+        <p>@ViewBag.NextSelected.UserRequest </p>
+    </button>
+</div>

@@ -10,9 +10,17 @@ namespace ChatBot.Controllers
     public class ChatController : Controller
     {
         // GET: Chat
-        private static int i = 0;
+        private int i = 0;
         private static ChatContext myDB = new ChatContext();
-        
+        [HttpPost]
+        public ActionResult MyForm(string mine)
+        {
+            int iMine = Int32.Parse(mine);
+            iMine = (iMine + 1) % myDB.Chats.Count();
+            ViewBag.i = iMine;
+            ViewBag.NextSelected = myDB.Chats.ToList().ElementAt(iMine);
+            return PartialView();
+        }
         public ActionResult Index()
         {
             ViewBag.i = i;
@@ -23,10 +31,13 @@ namespace ChatBot.Controllers
 
         public ActionResult HandleButtonClick(string mine)
         {
-            i = (i + 1) % myDB.Chats.Count();
-            ViewBag.i = i;
-            ViewBag.NextSelected = myDB.Chats.ToList().ElementAt(i);
-            return View("Index", myDB.Chats);
+            int iMine = Int32.Parse(mine);
+
+            //          i = (i + 1) % myDB.Chats.Count();
+            iMine = (iMine + 1) % myDB.Chats.Count();
+            ViewBag.i = iMine;
+            ViewBag.NextSelected = myDB.Chats.ToList().ElementAt(iMine);
+            return PartialView("MyForm");
         }
     }
 }

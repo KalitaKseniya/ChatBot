@@ -1,63 +1,77 @@
 ﻿@model IEnumerable<ChatBot.Models.Chat>
 @{
-    ViewBag.Title = "Chat";//IEnumerable<path>
     Layout = null;
+    ViewBag.Title = "Home page";
 }
 
-@ViewBag.i
 <style>
     .formStyle {
-        background: #fc3;
-        border: 3px solid black;
-        margin-left:400px;
+        position: absolute;
+        width: 500px;
         height: 500px;
-        width: 300px;
-        overflow-y: auto;
-        /*display: inline-block;*/
+        left: 400px;
+        top: 0px;
+        background: #FFFFFF;
+        border: 1px solid rgba(145, 99, 221, 0.6);
+        box-sizing: border-box;
+        border-radius: 18px;
+        overflow-y:auto;
     }
 </style>
-@using (Html.BeginForm("HandleButtonClick", "Chat", FormMethod.Post, new { id="formID", @class="formStyle" }))
-{
-//    <fieldset>
-    foreach (var item in Model)
-    {
-    <p align="right">@item.BotResponse</p>
-    if (item == ViewBag.NextSelected)
-    {
-    <button type="submit" name="mine" value=@item.Id>
-        <p align="left">@item.UserRequest</p>
-    </button>
-    break;
+
+
+<style>
+    .txtBoxStyle {
+/*        position: absolute;
+        width: 187px;
+        height: 49px;
+        left: 1214px;
+        top: 269px;
+        
+        align-items:center;
+        height: 40px;
+        left: 400px;
+        
+*/      background: #F3F3F3;
+        width: 140px;
+        border-radius: 18px 18px 0px 18px;
     }
-    <p align="left">@item.UserRequest</p>
+
+</style>
+<style>
+    .btnStyle {
+        background: #FAE9F4;
+        flex-direction: row;
+        border-radius: 8px;
+        
+        /*display: flex;
+        align-items: center;
+        padding: 1px 36px; 
+        
+        position: absolute;
+        width: 206px;
+        height: 56px;
+        */
     }
+</style>
+<div>
     
-}
+    @using (Ajax.BeginForm("HandleButtonClick", "Chat",
+        null, new AjaxOptions
+    {
+        UpdateTargetId = "results",
+        InsertionMode = InsertionMode.InsertAfter
+    },
+    new { @class = "formStyle" }))
+    {
+        <p align="center" class="txtBoxStyle">@Model.First().BotResponse</p>
+        <button style="float: right;" type="submit" name="mine" value=@Model.First().Id class="btnStyle">
+            <p >@Model.First().UserRequest </p>
+        </button>
+        <div id="results"></div>
+    }
 
+</div>
 
-<br />
-@*<label> Mensagem :</label> <input type="text" id="mensagem" style="width:500px" />
-    <input id="Enviar" type="button" value="Enviar" />*@
-
-
-@*<table>
-        <tr>
-            <th>
-                Request
-            </th>
-            <th>
-                Response
-            </th>
-        </tr>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @item.UserRequest
-                </td>
-                <td>
-                    @item.BotResponse
-                </td>
-            </tr>
-        }
-    </table>*@
+@Scripts.Render("~/scripts/jquery-3.4.1.min.js")
+@Scripts.Render("~/scripts/jquery.unobtrusive-ajax.min.js")

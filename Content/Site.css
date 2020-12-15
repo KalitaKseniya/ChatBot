@@ -23,3 +23,16 @@ textarea {
     max-width: 280px;
     border: 5px solid red;
 }
+
+
+
+    .formStyle
+{
+    background: #fc3;
+    border: 3px solid black;
+    margin-left: 400px;
+    height: 500px;
+    width: 300px;
+    overflow-y: auto;
+    /*display: inline-block;*/
+}
