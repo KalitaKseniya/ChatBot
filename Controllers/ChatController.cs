@@ -34,7 +34,7 @@ namespace ChatBot.Controllers
             int iMine = Int32.Parse(mine);
 
             //          i = (i + 1) % myDB.Chats.Count();
-            iMine = (iMine + 1) % myDB.Chats.Count();
+            //iMine = (iMine) % myDB.Chats.Count();
             ViewBag.i = iMine;
             ViewBag.NextSelected = myDB.Chats.ToList().ElementAt(iMine);
             return PartialView("MyForm");

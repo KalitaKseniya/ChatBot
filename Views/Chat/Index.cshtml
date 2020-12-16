@@ -4,6 +4,7 @@
     ViewBag.Title = "Home page";
 }
 
+
 <style>
     .formStyle {
         position: absolute;
@@ -15,62 +16,89 @@
         border: 1px solid rgba(145, 99, 221, 0.6);
         box-sizing: border-box;
         border-radius: 18px;
-        overflow-y:auto;
+        overflow-y: auto;
     }
-</style>
-
-
-<style>
     .txtBoxStyle {
-/*        position: absolute;
-        width: 187px;
-        height: 49px;
-        left: 1214px;
-        top: 269px;
-        
-        align-items:center;
-        height: 40px;
-        left: 400px;
-        
-*/      background: #F3F3F3;
+        background: #F3F3F3;
         width: 140px;
         border-radius: 18px 18px 0px 18px;
+        position: relative;
+        display: block;
     }
-
-</style>
-<style>
+    .newDiv {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
     .btnStyle {
         background: #FAE9F4;
-        flex-direction: row;
         border-radius: 8px;
-        
-        /*display: flex;
-        align-items: center;
-        padding: 1px 36px; 
-        
+        position: relative;
+        display: inline-block;
+        right: 0;
+        max-width: 300px;
+    }
+    .pseudoSnd {
         position: absolute;
-        width: 206px;
-        height: 56px;
-        */
+        width: 116px;
+        height: 57px;
+        right: 0;
+        bottom:0;
+        
+        background: rgba(145, 99, 221, 0.1);
+        border-radius: 18px;
+    }
+    .arrow {
+        /* Vector */
+        position: absolute;
+        left: 8.33%;
+        right: 8.33%;
+        top: 8.33%;
+        bottom: 8.33%;
+        border: 3px solid #9163DD;
+    }
+    .myLine {
+        /* Vector */
+        position: absolute;
+        left: 45.83%;
+        right: 8.33%;
+        top: 8.33%;
+        bottom: 45.83%;
+        border: 3px solid #9163DD;
     }
 </style>
-<div>
-    
-    @using (Ajax.BeginForm("HandleButtonClick", "Chat",
-        null, new AjaxOptions
-    {
-        UpdateTargetId = "results",
-        InsertionMode = InsertionMode.InsertAfter
-    },
-    new { @class = "formStyle" }))
-    {
-        <p align="center" class="txtBoxStyle">@Model.First().BotResponse</p>
-        <button style="float: right;" type="submit" name="mine" value=@Model.First().Id class="btnStyle">
-            <p >@Model.First().UserRequest </p>
-        </button>
-        <div id="results"></div>
-    }
 
+<div>
+        @using (Ajax.BeginForm("HandleButtonClick", "Chat",
+            null, new AjaxOptions
+            {
+                UpdateTargetId = "results",
+                InsertionMode = InsertionMode.InsertAfter
+            },
+        new { @class = "formStyle" }))
+        {
+
+            <p align="center" class="txtBoxStyle">@Model.First().BotResponse</p>
+            <div class="newDiv">
+                <button type="submit" name="mine" value=@Model.First().Id class="btnStyle">
+                    <p>@Model.First().UserRequest </p>
+                </button>
+            </div>
+
+            <div id="results"></div>
+
+            @*<div>
+                <button disabled class="pseudoSnd">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M26.5 1.5L17.75 26.5L12.75 15.25L1.5 10.25L26.5 1.5Z" stroke="#9163DD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.5 1.5L1.75 15.25" stroke="#9163DD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>*@
+        }
 </div>
 
 @Scripts.Render("~/scripts/jquery-3.4.1.min.js")
