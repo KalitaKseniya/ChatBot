@@ -18,6 +18,7 @@
         border-radius: 18px;
         overflow-y: auto;
     }
+
     .txtBoxStyle {
         background: #F3F3F3;
         width: 140px;
@@ -25,12 +26,14 @@
         position: relative;
         display: block;
     }
+
     .newDiv {
         position: relative;
         width: 100%;
         display: flex;
         justify-content: flex-end;
     }
+
     .btnStyle {
         background: #FAE9F4;
         border-radius: 8px;
@@ -38,17 +41,19 @@
         display: inline-block;
         right: 0;
         max-width: 300px;
-    }
+       /* bottom:0;
+  */  }
+
     .pseudoSnd {
         position: absolute;
         width: 116px;
         height: 57px;
         right: 0;
-        bottom:0;
-        
+        bottom: 0;
         background: rgba(145, 99, 221, 0.1);
         border-radius: 18px;
     }
+
     .arrow {
         /* Vector */
         position: absolute;
@@ -58,6 +63,7 @@
         bottom: 8.33%;
         border: 3px solid #9163DD;
     }
+
     .myLine {
         /* Vector */
         position: absolute;
@@ -67,38 +73,56 @@
         bottom: 45.83%;
         border: 3px solid #9163DD;
     }
+
+    .newMsg {
+        /* Rectangle 2 */
+        position: absolute;
+        height: 57px;
+        left: 30px;
+        bottom: -0px;
+        background: #F3F3F3;
+        border-radius: 18px;
+        width: 320px;
+        resize: none;
+    }
 </style>
 
 <div>
-        @using (Ajax.BeginForm("HandleButtonClick", "Chat",
-            null, new AjaxOptions
-            {
-                UpdateTargetId = "results",
-                InsertionMode = InsertionMode.InsertAfter
-            },
-        new { @class = "formStyle" }))
-        {
 
-            <p align="center" class="txtBoxStyle">@Model.First().BotResponse</p>
+    @using (Ajax.BeginForm("HandleButtonClick", "Chat",
+        null, new AjaxOptions
+        {
+            UpdateTargetId = "results",
+            InsertionMode = InsertionMode.Replace
+        },
+    new { @class = "formStyle" }))
+    {
+        <div style="height: 70% ! important; overflow:auto ! important;">
+            <p align="center" class="txtBoxStyle">@*@Model.First().BotResponse*@</p>
             <div class="newDiv">
-                <button type="submit" name="mine" value=@Model.First().Id class="btnStyle">
-                    <p>@Model.First().UserRequest </p>
+                <button type="submit" name="mine" value="0" class="btnStyle">
+                    <p> Старт!!!!!!!@*@Model.First().UserRequest*@</p>
                 </button>
             </div>
-
+        </div>
+        <div style="height: 15% ! important;">
             <div id="results"></div>
+        </div>
+        <div style="height: 15% ! important;">
 
-            @*<div>
-                <button disabled class="pseudoSnd">
-                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M26.5 1.5L17.75 26.5L12.75 15.25L1.5 10.25L26.5 1.5Z" stroke="#9163DD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15.5 1.5L1.75 15.25" stroke="#9163DD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </button>
-            </div>*@
-        }
+            <button disabled class="pseudoSnd" height="50px" width="50px">
+                <svg width=30px height=30px viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M26.5 1.5L17.75 26.5L12.75 15.25L1.5 10.25L26.5 1.5Z" stroke="#9163DD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.5 1.5L1.75 15.25" stroke="#9163DD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+            <textarea class="newMsg" align="center">Введите сообщение...</textarea>
+
+        </div>
+
+    }
 </div>
 
 @Scripts.Render("~/scripts/jquery-3.4.1.min.js")
