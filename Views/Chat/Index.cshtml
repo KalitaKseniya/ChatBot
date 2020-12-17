@@ -8,8 +8,8 @@
 <style>
     .formStyle {
         position: absolute;
-        width: 500px;
-        height: 500px;
+        width: 600px;
+        height: 570px;
         left: 400px;
         top: 0px;
         background: #FFFFFF;
@@ -19,30 +19,81 @@
         overflow-y: auto;
     }
 
-    .txtBoxStyle {
+    .txtBoxStyleRequest {
+        right:0;
         background: #F3F3F3;
-        width: 140px;
+        
         border-radius: 18px 18px 0px 18px;
+        font-size: medium;
+        /*position: relative;
+        display: block;
+        right: 0;*/
         position: relative;
         display: block;
+        text-align: center;
+        font-family: Manrope;
+        font-family: cursive;
+        font-style: normal;
+        font-weight: normal;
+        font-size: small;
+        align-content: center;
+    }
+
+    .txtBoxStyleResponse {
+        max-width: 200px;
+        background: #F3F3F3;
+        border-radius: 18px 18px 18px 0px;
+        position: relative;
+        display: block;
+        font-size: small;
+        font-family: cursive;
+        font-style: normal;
+        font-weight: normal;
+        align-content: center;
     }
 
     .newDiv {
+        justify-content: center;
         position: relative;
         width: 100%;
         display: flex;
+        /*justify-content: flex-end;*/
+    }
+    .newDivRight {
         justify-content: flex-end;
+        position: relative;
+        width: 100%;
+        display: flex;
+        /*justify-content: flex-end;*/
     }
 
     .btnStyle {
+        border-color: #FAE9F4;
         background: #FAE9F4;
         border-radius: 8px;
         position: relative;
         display: inline-block;
         right: 0;
         max-width: 300px;
-       /* bottom:0;
-  */  }
+        /* bottom:0;
+  */
+    }
+    .btnTxt {
+        font-family: Manrope;
+        font-style: normal;
+        font-size: small;
+        /*font-weight: 500;*/
+       
+        /*line-height: 31px;*/
+        /* identical to box height */
+        color: #DF67B2;
+        /* Inside Auto Layout */
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        margin: 5px 0px;
+        font-family: cursive;
+    }
 
     .pseudoSnd {
         position: absolute;
@@ -53,7 +104,9 @@
         background: rgba(145, 99, 221, 0.1);
         border-radius: 18px;
     }
-
+    div > .txtBoxStyle {
+        color: red;
+    }
     .arrow {
         /* Vector */
         position: absolute;
@@ -78,12 +131,27 @@
         /* Rectangle 2 */
         position: absolute;
         height: 57px;
-        left: 30px;
+        left: 60px;
         bottom: -0px;
         background: #F3F3F3;
         border-radius: 18px;
-        width: 320px;
+        width: 70%;
         resize: none;
+        color: rgba(0, 0, 0, 0.21);
+    }
+    .txtStyle {
+        font-family: Manrope;
+        font-style: normal;
+        font-weight: normal;
+        font-size: small;
+/*        line-height: 31px;
+*/        color: #000000;
+    }
+    .vertical-center {
+        margin: 0;
+        position: relative;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
     }
 </style>
 
@@ -93,33 +161,34 @@
         null, new AjaxOptions
         {
             UpdateTargetId = "results",
-            InsertionMode = InsertionMode.Replace
+            InsertionMode = InsertionMode.InsertAfter
         },
     new { @class = "formStyle" }))
     {
-        <div style="height: 70% ! important; overflow:auto ! important;">
-            <p align="center" class="txtBoxStyle">@*@Model.First().BotResponse*@</p>
-            <div class="newDiv">
-                <button type="submit" name="mine" value="0" class="btnStyle">
-                    <p> Старт!!!!!!!@*@Model.First().UserRequest*@</p>
-                </button>
-            </div>
+    <div style="height: 87% ! important; overflow:auto ! important;">
+        <p align="center" class="txtBoxStyle">@*@Model.First().BotResponse*@</p>
+        <div class="newDiv">
+            <button type="submit" name="mine" value="1" class="btnStyle">
+                <p class="btnTxt"> Поехали!!!!!!!@*@Model.First().UserRequest*@</p>
+            </button>
         </div>
-        <div style="height: 15% ! important;">
-            <div id="results"></div>
-        </div>
-        <div style="height: 15% ! important;">
+        <div id="results"></div>
+    </div>
+        @*<div style="height: 15% ! important;">
+            
+        </div>*@
+        <div style="height: 13% ! important;">
 
             <button disabled class="pseudoSnd" height="50px" width="50px">
                 <svg width=30px height=30px viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M26.5 1.5L17.75 26.5L12.75 15.25L1.5 10.25L26.5 1.5Z" stroke="#9163DD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
-                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                @*<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15.5 1.5L1.75 15.25" stroke="#9163DD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
+                </svg>*@
             </button>
-            <textarea class="newMsg" align="center">Введите сообщение...</textarea>
-
+            <textarea disabled class="newMsg" align="center">Введите сообщение...</textarea>
+            <button class="btnStyle" type="submit" name="mine" value="999"><p class="btnTxt">Home</p></button>
         </div>
 
     }

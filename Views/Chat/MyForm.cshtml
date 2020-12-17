@@ -1,12 +1,16 @@
 ﻿@model IEnumerable<ChatBot.Models.Chat>
 <div id="myresults">
-    
-        @*<p align="center" class="txtBoxStyle">@ViewBag.NextSelected.BotResponse</p>*@
+
+    <div class="newDivRight">
+        <p align="center" class="txtBoxStyleRequest">@ViewBag.NextSelected.UserRequest</p>
+    </div>
+    <p align="center" class="txtBoxStyleResponse">@ViewBag.NextSelected.BotResponse</p>
+
     <div class="newDiv">
         @foreach (var item in @Model)
         {
             <button type="submit" name="mine" value=@item.Id class="btnStyle">
-                <p>@item.UserRequest </p>
+                <p class="btnTxt">@item.UserRequest </p>
             </button>
 
         }

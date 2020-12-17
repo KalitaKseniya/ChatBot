@@ -33,13 +33,17 @@ namespace ChatBot.Controllers
         {
             int iMine = Int32.Parse(mine);//id database begins from 1 and in listts- from 0
             List<Chat> list = new List<Chat>();
-            if (iMine == 0)
+            //if (iMine == 0)
+            //{
+            //    ViewBag.NextSelected = myDB.Chats.ToList().ElementAt(0);
+            //    list.Add(myDB.Chats.ToList().First());
+            //    return PartialView("MyForm", list);
+            //}
+            if(iMine == 999)
             {
-                list.Add(myDB.Chats.ToList().First());
-                return PartialView("MyForm", list);
+                iMine = 1;
             }
             ViewBag.NextSelected = myDB.Chats.ToList().Find(a => a.Id == iMine);
-                                                                        //            ViewBag.i = iMine;
             if (ViewBag.NextSelected.NextIDs == null)
             {
                 return PartialView("MyForm", list);
@@ -54,17 +58,13 @@ namespace ChatBot.Controllers
             {
                 list.Add(myDB.Chats.ToList().Find(a => a.Id == item)) ; 
             }
-            //foreach (var a in myDB.Chats.ToList())
-            //{
+            if(mine =="999")
+            {
+                ViewBag.NextSelected.BotResponse = "Возвращаемся в главное меню!";
+                ViewBag.NextSelected.UserRequest = null;
 
-            //    if (NextIds.Contains(a.Id))
-            //    {
-            //        list.Add(a);
-            //    }
-            //}
-            ////list = (List<Chat>)myDB.Chats.ToList().Where(a => 
-            //    (ViewBag.NextSelected.NextIDs.Contains(a.Id.ToString() + ",") || ViewBag.NextSelected.NextIDs.Contains(a.Id.ToString() + ".")));
-            return PartialView("MyForm", list);
+            }
+           return PartialView("MyForm", list);
         }
     }
 }
