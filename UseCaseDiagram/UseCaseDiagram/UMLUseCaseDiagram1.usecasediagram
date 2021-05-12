@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="d4a8c6f4-c10a-4e6b-9580-f5b982df39fd" name="UMLUseCaseDiagram1" linkedPackageId="a7763f08-248c-4a11-b423-0eb64ebfd74c" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="c783fb7c-ee89-440a-82aa-b1308fea886f">
+      <profileInstance Id="61d422ce-6ce5-45c4-9fca-38352d2d5f1f" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="889e66df-e2c6-4ce4-818a-bd173d76d48c">
+      <profileInstance Id="6081bbdc-87f6-4ac2-824b-3945c6bf743c" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="4e31198b-b831-4007-a0ae-634c8bcfd29f" name="Пользователь" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c42dc5eb-1b01-4b44-ba71-20c541ffb207" />
+        <targetEnds>
+          <association Id="94bcfa95-3ab1-430d-9d53-3765cb808580" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Нажать на кнопку с вопросом" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="87ddaf3a-bd4e-4ead-bac4-f92b4a80b332" LastKnownName="Нажать на кнопку с вопросом" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f7e20777-46e6-41e2-9527-dc228fc42400" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c66d8117-daaf-4c23-8256-932cb98f9ca5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c2ef86bf-67d1-4c48-9a6d-6b5955fc9242" name="Нажать на кнопку с вопросом" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d6491b30-a851-4e2b-86dd-794192ac1bec" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ae42080a-e452-4425-ade3-0bfac9f32730" />
+          </association>
+          <association Id="6a342d44-742d-4a86-93bc-5c6322b1a90f" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Отобразить начальную страницу" isLeaf="false" name="посетить" isAbstract="false">
+            <useCaseMoniker Id="bec62ba1-7fe5-4733-b922-3a4d302dabf0" LastKnownName="Отобразить начальную страницу" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1fc50b0a-9892-4fd4-8d78-e069fb9c793b" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c0c7c73c-c174-4340-be86-81652984ff3a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cbdd451d-e7a2-41bd-81b0-d18400d67174" name="Отобразить начальную страницу" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="61708fee-1f46-4e6d-90af-59fc24cfc692" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="999eaacb-c097-4abe-8248-e09c3484bed8" />
+          </association>
+          <association Id="15bf4847-1ce2-4b07-8d99-1e85a2408f8a" isDerived="false" sourceEndRoleName="Пользователь" targetEndRoleName="Обновить чат" isLeaf="false" name="ознакомиться с ответом" isAbstract="false">
+            <useCaseMoniker Id="506a4a81-cf36-421d-b3d1-687af8d662e8" LastKnownName="Обновить чат" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6e54486b-d726-4cc8-82cc-389f25c3e5d2" name="Пользователь" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f3636394-8f24-478d-afdf-6642becd3786" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fead44b4-da2e-4576-b054-fc6c0670e70e" name="Обновить чат" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ed3a4418-dc3d-490a-b402-76c30cdc5c98" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="50b44ed7-ba2e-4d7c-b567-00caa0d047fb" />
+          </association>
+          <association Id="86ba3a1a-2230-4c51-8c08-0e279d9b1ed0" isDerived="false" sourceEndRoleName="Пользователь" targetEndRoleName="Прокрутить чат " isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="0ccf97a4-7fee-470f-916e-bcd7272ab79e" LastKnownName="Прокрутить чат " />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ac18c3db-6337-491f-a68f-2064e58b826e" name="Пользователь" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="eb916d3b-1907-4c35-92e1-e275492be7b3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="82ac8608-5afb-413f-b7e2-57405ac92882" name="Прокрутить чат " isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ac885544-266a-490e-95ce-e456dc7426c5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d02bfe5f-dffa-4a63-839c-3183c20c2a07" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="3a94e7ac-c268-4761-b2d0-22a59c153508" name="Модель" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0e17e523-85ba-4936-a091-89ff30c33e04" />
+        <targetEnds>
+          <association Id="45461a7b-97c6-4634-8266-93ab1327ae44" isDerived="false" sourceEndRoleName="Модель" targetEndRoleName="Запрос данных" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="f3680ee4-d955-44d9-8615-a9582a40f0ed" LastKnownName="Поиск новых данных" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f95ed551-3857-4fc3-8881-9911ed1acfb4" name="Модель" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6ab9f26d-68d7-4faa-90de-3925fffb4e17" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a6480edc-7ff8-45cc-88ae-336af0e08bde" name="Запрос данных" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f8e87ceb-efa0-49ce-9555-c7959da8a8ed" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ba9fb707-2b1e-4864-96b1-519fddbcf777" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="437aeb0c-8363-433a-81ca-b93a109d34f4" name="Представление" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7d913fac-4ac5-4320-a1de-84d6a9f7335b" />
+        <targetEnds>
+          <association Id="04a79536-f272-42e3-a159-8d587584c92c" isDerived="false" sourceEndRoleName="Представление" targetEndRoleName="Отобразить начальную страницу" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="bec62ba1-7fe5-4733-b922-3a4d302dabf0" LastKnownName="Отобразить начальную страницу" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b2820117-8c8a-4c40-acf9-22b22f09f14a" name="Представление" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8fa48509-f7c3-4ecb-8c51-c9a4d054f03a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5f1a1829-725c-47bc-af17-1dceb9cef124" name="Отобразить начальную страницу" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7add6412-2623-4956-9faa-cb65ae0d5835" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="374b8aa6-67aa-4e77-afd6-aa1992ab43b9" />
+          </association>
+          <association Id="c590ee44-ee29-4a1d-9a3b-4091ebd3485d" isDerived="false" sourceEndRoleName="Представление" targetEndRoleName="Обновить чат" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="506a4a81-cf36-421d-b3d1-687af8d662e8" LastKnownName="Обновить чат" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7e82ca2c-a4cc-462e-ba0f-27228ffd3e1b" name="Представление" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="45482e41-753f-4b08-a6f8-a02ca286dfc6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2d49ca7d-038e-4f33-a78d-e4b08cae6e7d" name="Обновить чат" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f63c3a67-2fa0-4f0b-af00-5d9193d27b99" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="48bb5231-30c4-468e-88f8-20b396a0fe2c" />
+          </association>
+          <association Id="185fcdc5-b217-43b0-904f-04d467072bf8" isDerived="false" sourceEndRoleName="Представление" targetEndRoleName="Нажать на кнопку с вопросом" isLeaf="false" name="получить уведомление" isAbstract="false">
+            <useCaseMoniker Id="87ddaf3a-bd4e-4ead-bac4-f92b4a80b332" LastKnownName="Нажать на кнопку с вопросом" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b5471c8d-ed17-4e98-a258-0dea830f87cc" name="Представление" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="57919eac-d685-44da-b491-a34e822e7b43" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="836e40f6-d1f0-4176-b6dc-cb2355ccf6e1" name="Нажать на кнопку с вопросом" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="42a3a498-20e9-452d-81c8-9ff69184b456" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e6012ab9-c8ea-49af-a15a-7f45195ea8f9" />
+          </association>
+          <association Id="853ebe2a-4bc5-4a35-9fe2-fe63fd9e71ff" isDerived="false" sourceEndRoleName="Представление" targetEndRoleName="Прокрутить чат " isLeaf="false" name="отобразить соответствующие вопросы-ответы" isAbstract="false">
+            <useCaseMoniker Id="0ccf97a4-7fee-470f-916e-bcd7272ab79e" LastKnownName="Прокрутить чат " />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="57f16d12-a009-4999-bd39-2f7671c419a0" name="Представление" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="959265a4-6780-4115-8e8c-941ace862c4a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f1417f28-ef01-48dd-b847-c53f126c6f79" name="Прокрутить чат " isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1c1de22a-a8f5-4047-8e8d-696d1a8ad350" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="55f94c63-748a-4d71-aee2-e80c6fcfff71" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="30737603-cb70-409a-819a-11578d420ef1" name="Контроллер" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="af80838c-e352-41e0-a99a-800f2229754c" />
+        <targetEnds>
+          <association Id="7d7b4137-9c1b-40f2-80a8-635bb199780a" isDerived="false" sourceEndRoleName="Контроллер" targetEndRoleName="Запрос данных" isLeaf="false" name="запрос на поиск" isAbstract="false">
+            <useCaseMoniker Id="f3680ee4-d955-44d9-8615-a9582a40f0ed" LastKnownName="Поиск новых данных" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7574d08f-9e4f-4692-8f65-9f92b0e8c3ab" name="Контроллер" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="92b4c80c-2ca6-49ec-ad49-dcca4ba3b100" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cd0692f1-6ac7-4e57-99ee-0eb173f0e750" name="Запрос данных" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c5b09e05-a97b-4d33-94d1-952f345a01be" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f55a0fc1-01e0-4b61-9171-bf97bcf3a026" />
+          </association>
+          <association Id="fe9fbd63-3984-40fb-a690-6473b47537d6" isDerived="false" sourceEndRoleName="Контроллер" targetEndRoleName="Получить новые данные " isLeaf="false" name="передать" isAbstract="false">
+            <useCaseMoniker Id="c029acd9-e534-491e-b7c5-fcfa0a78ee3c" LastKnownName="Получить новые данные " />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9a52d3ab-16ea-496e-8e14-8cbbcf17eef4" name="Контроллер" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e0e8c6c1-d11b-4ac0-af2d-e6d3dd962115" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="384c2864-586a-42d4-bc4d-55602d35ab72" name="Получить новые данные " isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5db7d80f-783a-4bd9-b66b-782f2049c4f2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="00af2d45-2162-4817-b72a-c07b23280862" />
+          </association>
+          <association Id="a001eda0-5b4b-48cc-bdb8-7b9859a15d31" isDerived="false" sourceEndRoleName="Контроллер" targetEndRoleName="Получить начальные данные" isLeaf="false" name="сформировать" isAbstract="false">
+            <useCaseMoniker Id="43765c4d-45c3-46da-9bd1-4f5d3046ab70" LastKnownName="Получить начальные данные" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8c607b81-12d0-4a23-bff0-793ed6aeb3d4" name="Контроллер" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5a513563-1bc6-4e88-9308-9dc670ac9e7e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="113731d3-2f73-42e9-b076-52276ca7cddd" name="Получить начальные данные" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="36217c8e-7622-40e6-af5e-fb1a074b6c2b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9d217b1b-40ea-4528-be64-c9e91934fcc7" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="384221a5-cfdb-448c-871f-cb91ca0b6ff7" name="База данных" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0d32b725-5684-40a9-abe1-adf9a6e21d03" />
+        <targetEnds>
+          <association Id="d1287487-f407-4020-848d-c24c2c2d55cb" isDerived="false" sourceEndRoleName="База данных" targetEndRoleName="Запрос данных у БД" isLeaf="false" name="вернуть найденное" isAbstract="false">
+            <useCaseMoniker Id="d8453265-3e58-47b3-b6a9-d38f14e60a38" LastKnownName="Запрос данных у БД" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a6f93e95-a4b3-43df-b9ce-c43f6550bb07" name="База данных" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a48aadcc-6bda-4873-a2ba-a76e7d16031b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="81b0cf13-fef2-4734-9492-16aa79518c30" name="Запрос данных у БД" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d1e1e112-4e15-445b-bdb7-7bf689fab5f8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2bc8b5fb-f1c3-46bf-8680-fe9d0cf5124f" />
+          </association>
+          <association Id="1bafd572-0614-4e0f-85e2-0acabf0f5ec5" isDerived="false" sourceEndRoleName="База данных" targetEndRoleName="Хранить данные" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="a4ae569d-2401-45ac-b502-46652fbb2e68" LastKnownName="Хранить данные" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a2b09e3c-4211-4d8e-9566-609225cfae36" name="База данных" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d19dd744-4204-4f21-a5a3-1da708ad4b55" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d3f37dd1-39af-407b-80f9-b67544f94234" name="Хранить данные" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="712cb0f7-dd8d-43bb-bb0a-a979ae4b8ec6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="780827d3-1367-44ee-aab7-508045b66afb" />
+          </association>
+          <association Id="72ab6a78-418a-4dae-aa4d-4ebba82b89e0" isDerived="false" sourceEndRoleName="База данных" targetEndRoleName="Обработка информации" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="e003ca46-1d67-453c-942f-6202460c6942" LastKnownName="Обработка информации" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d53e7bc1-ef4f-43ce-8aad-29735bd0997e" name="База данных" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0ec61297-f622-454a-bdc1-bebc16c866a4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ecb6d2b2-a1df-4e88-9ffd-48c95124168f" name="Обработка информации" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6a4e89d2-6482-4030-9e9c-845eb471beeb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e2955e1d-3996-42ce-b0d4-349a2795e9ca" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="e1db14d3-3015-43b3-84b2-65498820a94c" name="Чат-бот" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="00cd69f0-c9b1-4744-a1ce-bfc3ef5d68a5" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="bec62ba1-7fe5-4733-b922-3a4d302dabf0" name="Отобразить начальную страницу" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3d6ac323-1476-4166-a302-d075d2ad26e2" />
+        <additions>
+          <include Id="aff9d06c-9d4a-4043-853a-02ed49a17bdf">
+            <useCaseMoniker Id="43765c4d-45c3-46da-9bd1-4f5d3046ab70" LastKnownName="Получить начальные данные" />
+            <elementDefinition Id="40263b45-261c-4b6c-82cc-e47b02d3b974" />
+          </include>
+          <include Id="55846385-c022-489a-8e0c-ee12db052ea2">
+            <useCaseMoniker Id="856bd77f-7dbb-48c1-ac7b-ce4b0d7ddf66" LastKnownName="Вывести чат" />
+            <elementDefinition Id="58141fe2-fbfb-4442-b5eb-46e91c2cb92a" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="e1db14d3-3015-43b3-84b2-65498820a94c" LastKnownName="Чат-бот" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="87ddaf3a-bd4e-4ead-bac4-f92b4a80b332" name="Нажать на кнопку с вопросом" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e4750c7e-35ef-4984-9935-7e550f9d05d4" />
+        <subjects>
+          <subsystemMoniker Id="e1db14d3-3015-43b3-84b2-65498820a94c" LastKnownName="Чат-бот" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="506a4a81-cf36-421d-b3d1-687af8d662e8" name="Обновить чат" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ea7f7e87-2c07-4aaa-b8b6-895552239ce7" />
+        <additions>
+          <include Id="186bc412-c25b-4978-bfd5-6ffa881bc245">
+            <useCaseMoniker Id="c029acd9-e534-491e-b7c5-fcfa0a78ee3c" LastKnownName="Получить новые данные " />
+            <elementDefinition Id="d5f2868c-1d58-4a62-a50d-a1554560c3f6" />
+          </include>
+          <include Id="83e12a92-9332-48ad-9f4a-18ef90859db4">
+            <useCaseMoniker Id="43cc2c25-600f-45a2-ba70-bc83ec172939" LastKnownName="Отобразить новые данные" />
+            <elementDefinition Id="93a5a330-4165-4565-a791-72bbb20ed575" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="e1db14d3-3015-43b3-84b2-65498820a94c" LastKnownName="Чат-бот" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="43765c4d-45c3-46da-9bd1-4f5d3046ab70" name="Получить начальные данные" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1ca940cd-8685-4151-97bb-abd923de2f16" />
+        <subjects>
+          <subsystemMoniker Id="e1db14d3-3015-43b3-84b2-65498820a94c" LastKnownName="Чат-бот" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="856bd77f-7dbb-48c1-ac7b-ce4b0d7ddf66" name="Вывести чат" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="07d81c4a-b2ce-4f32-bbf2-bd881d5409f4" />
+        <subjects>
+          <subsystemMoniker Id="e1db14d3-3015-43b3-84b2-65498820a94c" LastKnownName="Чат-бот" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="c029acd9-e534-491e-b7c5-fcfa0a78ee3c" name="Получить новые данные " isAbstract="false" isLeaf="false">
+        <elementDefinition Id="24e86161-c009-4ffc-8866-8cfd0a99dab0" />
+        <subjects>
+          <subsystemMoniker Id="e1db14d3-3015-43b3-84b2-65498820a94c" LastKnownName="Чат-бот" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="43cc2c25-600f-45a2-ba70-bc83ec172939" name="Отобразить новые данные" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f9dd256b-783d-49c5-81c9-fb1f81aafacf" />
+        <subjects>
+          <subsystemMoniker Id="e1db14d3-3015-43b3-84b2-65498820a94c" LastKnownName="Чат-бот" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="f3680ee4-d955-44d9-8615-a9582a40f0ed" name="Поиск новых данных" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="387a5f78-d23f-4146-9463-2db22780ec53" />
+        <additions>
+          <include Id="e9eb7dd1-2c08-42e8-ab84-b6dfc2f72df2">
+            <useCaseMoniker Id="d8453265-3e58-47b3-b6a9-d38f14e60a38" LastKnownName="Запрос данных у БД" />
+            <elementDefinition Id="ed570392-8a15-4c71-80cc-e6bf820fdbc5" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="e1db14d3-3015-43b3-84b2-65498820a94c" LastKnownName="Чат-бот" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="d8453265-3e58-47b3-b6a9-d38f14e60a38" name="Запрос данных у БД" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="815fe5cc-8a13-43d0-94fc-fb9176f9542f" />
+        <subjects>
+          <subsystemMoniker Id="e1db14d3-3015-43b3-84b2-65498820a94c" LastKnownName="Чат-бот" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="a4ae569d-2401-45ac-b502-46652fbb2e68" name="Хранить данные" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="edd891c8-2f98-4a88-9493-b77fcc7ed7ae" />
+        <subjects>
+          <subsystemMoniker Id="e1db14d3-3015-43b3-84b2-65498820a94c" LastKnownName="Чат-бот" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="0ccf97a4-7fee-470f-916e-bcd7272ab79e" name="Прокрутить чат " isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7a4617ba-db5f-4645-8fe9-441616648aaf" />
+        <subjects>
+          <subsystemMoniker Id="e1db14d3-3015-43b3-84b2-65498820a94c" LastKnownName="Чат-бот" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="45968af4-deba-4f20-9bcd-a80fe4394f60" name="Добавить информацию" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="aa70763f-502f-4883-b4b7-34081275251e" />
+        <generalsInternal>
+          <generalization Id="20e59dbe-2edb-496c-a861-07a99d47e389" isSubstitutable="false">
+            <useCaseMoniker Id="e003ca46-1d67-453c-942f-6202460c6942" LastKnownName="Обработка информации" />
+            <elementDefinition Id="793cb7c1-0a94-493f-8924-de3281f8fd9a" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker Id="e1db14d3-3015-43b3-84b2-65498820a94c" LastKnownName="Чат-бот" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="1b156861-1f51-47e7-97d4-66322de4b36d" name="Редактировать информацию" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7b7067fa-bf48-43c6-a29a-25f23378ef2b" />
+        <generalsInternal>
+          <generalization Id="b0d184fe-95e7-42eb-bbe1-88b9c29cac43" isSubstitutable="false">
+            <useCaseMoniker Id="e003ca46-1d67-453c-942f-6202460c6942" LastKnownName="Обработка информации" />
+            <elementDefinition Id="14d6bb52-3a61-44e9-9875-93d74854510e" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker Id="e1db14d3-3015-43b3-84b2-65498820a94c" LastKnownName="Чат-бот" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="7e5555ff-259d-44c5-819c-82dfe5e097ef" name="Удалить информацию" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="04ff68ed-dea6-4e6c-934c-89fdcd2fdb30" />
+        <generalsInternal>
+          <generalization Id="34c13be1-8a53-4fe7-bef5-9ca6b30019c9" isSubstitutable="false">
+            <useCaseMoniker Id="e003ca46-1d67-453c-942f-6202460c6942" LastKnownName="Обработка информации" />
+            <elementDefinition Id="9bd398d3-8e59-42de-813d-6ce6f453a633" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker Id="e1db14d3-3015-43b3-84b2-65498820a94c" LastKnownName="Чат-бот" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="e003ca46-1d67-453c-942f-6202460c6942" name="Обработка информации" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5592a222-179b-481d-9932-5ae443df67e9" />
+        <subjects>
+          <subsystemMoniker Id="e1db14d3-3015-43b3-84b2-65498820a94c" LastKnownName="Чат-бот" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="a7763f08-248c-4a11-b423-0eb64ebfd74c" name="UseCaseDiagram">
+    <elementDefinition Id="f9d03c4b-9a44-4afb-a215-9c300b96ded2" />
+  </package>
+</useCaseModelRoot>

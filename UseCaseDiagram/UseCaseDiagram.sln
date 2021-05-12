@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "UseCaseDiagram", "UseCaseDiagram\UseCaseDiagram.modelproj", "{023F0F2B-FB40-480B-8E1A-296A721EE6BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{023F0F2B-FB40-480B-8E1A-296A721EE6BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{023F0F2B-FB40-480B-8E1A-296A721EE6BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{023F0F2B-FB40-480B-8E1A-296A721EE6BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{023F0F2B-FB40-480B-8E1A-296A721EE6BD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

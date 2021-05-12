@@ -33,12 +33,6 @@ namespace ChatBot.Controllers
         {
             int iMine = Int32.Parse(mine);//id database begins from 1 and in listts- from 0
             List<Chat> list = new List<Chat>();
-            //if (iMine == 0)
-            //{
-            //    ViewBag.NextSelected = myDB.Chats.ToList().ElementAt(0);
-            //    list.Add(myDB.Chats.ToList().First());
-            //    return PartialView("MyForm", list);
-            //}
             if(iMine == 999)
             {
                 iMine = 1;
