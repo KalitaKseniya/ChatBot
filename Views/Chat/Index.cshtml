@@ -1,8 +1,6 @@
 ﻿@model IEnumerable<ChatBot.Models.Chat>
-@{
-    Layout = null;
-    ViewBag.Title = "Home page";
-}
+@{ Layout = null;
+    ViewBag.Title = "Home page"; }
 
 
 <style>
@@ -10,8 +8,8 @@
         position: absolute;
         width: 600px;
         height: 570px;
-        left: 400px;
-        top: 0px;
+        left: 50%;
+        top: 10%;
         background: #FFFFFF;
         border: 1px solid rgba(145, 99, 221, 0.6);
         box-sizing: border-box;
@@ -20,36 +18,34 @@
     }
 
     .txtBoxStyleRequest {
-        right:0;
-        background: #F3F3F3;
-        
+        right: 20px;
+        background-color: honeydew;
+        min-width: initial;
+        max-width: 300px;
         border-radius: 18px 18px 0px 18px;
+        padding: 7px;
         font-size: medium;
-        /*position: relative;
-        display: block;
-        right: 0;*/
         position: relative;
-        display: block;
-        text-align: center;
-        font-family: Manrope;
-        font-family: cursive;
+        font-family: Verdana;
         font-style: normal;
         font-weight: normal;
         font-size: small;
-        align-content: center;
+        margin: 10px;
     }
 
     .txtBoxStyleResponse {
-        max-width: 200px;
+        padding: 7px;
+        left: 20px;
+        width: max-content;
+        max-width: 300px;
         background: #F3F3F3;
-        border-radius: 18px 18px 18px 0px;
         position: relative;
-        display: block;
+        border-radius: 18px 18px 18px 0px;
         font-size: small;
-        font-family: cursive;
+        font-family: Verdana;
         font-style: normal;
         font-weight: normal;
-        align-content: center;
+        margin: 10px;
     }
 
     .newDiv {
@@ -57,13 +53,25 @@
         position: relative;
         width: 100%;
         display: flex;
+        margin-top: 5px;
+        margin-bottom: 5px;
         /*justify-content: flex-end;*/
     }
+
     .newDivRight {
         justify-content: flex-end;
         position: relative;
         width: 100%;
         display: flex;
+        margin: 0px 0 0px 0;
+    }
+
+    .newDivLeft {
+        left: 0;
+        justify-content: flex-end;
+        width: 100%;
+        display: flex;
+        margin: 0px 0 0px 0;
         /*justify-content: flex-end;*/
     }
 
@@ -75,38 +83,42 @@
         display: inline-block;
         right: 0;
         max-width: 300px;
+        border: 0;
+        margin: 0 1px 0 1px;
         /* bottom:0;
-  */
+      */
     }
+
     .btnTxt {
-        font-family: Manrope;
+        font-family: Verdana;
         font-style: normal;
         font-size: small;
-        /*font-weight: 500;*/
-       
-        /*line-height: 31px;*/
-        /* identical to box height */
         color: #DF67B2;
-        /* Inside Auto Layout */
         flex: none;
         order: 0;
         flex-grow: 0;
-        margin: 5px 0px;
-        font-family: cursive;
+        border-style: none;
+        padding: 7px;
+        margin: 0;
     }
 
     .pseudoSnd {
         position: absolute;
-        width: 116px;
-        height: 57px;
-        right: 0;
-        bottom: 0;
+        /*width: 116px;
+        height: 57px;*/
+        width: 15%;
+        height: 10%;
+        right: 10px;
+        bottom: 10px;
         background: rgba(145, 99, 221, 0.1);
         border-radius: 18px;
+        border-style: none;
     }
+
     div > .txtBoxStyle {
         color: red;
     }
+
     .arrow {
         /* Vector */
         position: absolute;
@@ -129,32 +141,133 @@
 
     .newMsg {
         /* Rectangle 2 */
+        padding: 10px;
         position: absolute;
         height: 57px;
-        left: 60px;
-        bottom: -0px;
+        left: 70px;
+        bottom: 10px;
         background: #F3F3F3;
         border-radius: 18px;
         width: 70%;
         resize: none;
         color: rgba(0, 0, 0, 0.21);
+        font-family: Manrope;
+        border-style: none;
+        font-size: large;
     }
+
     .txtStyle {
         font-family: Manrope;
         font-style: normal;
         font-weight: normal;
         font-size: small;
-/*        line-height: 31px;
-*/        color: #000000;
+        /*        line-height: 31px;
+    */ color: #000000;
     }
+
     .vertical-center {
         margin: 0;
         position: relative;
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
     }
-</style>
 
+    .psu-form {
+        position: absolute;
+        left: 10%;
+        right: 78.1%;
+        top: 10%;
+        bottom: 39.83%;
+        color: #9163DD;
+        font-weight: bold;
+        font-family: Arial;
+    }
+
+    .txtPsu {
+        position: absolute;
+        left: 10%;
+        top: 40%;
+    }
+    /* картинка на странице */
+    .minimized {
+        width: 300px;
+        cursor: pointer;
+        border: 1px solid #FFF;
+    }
+
+        .minimized:hover {
+            border: 1px solid yellow;
+        }
+
+    /* увеличенная картинка */
+    #magnify {
+        display: none;
+        /* position: absolute; upd: 24.10.2016 */
+        position: fixed;
+        max-width: 600px;
+        height: auto;
+        z-index: 9999;
+    }
+
+        #magnify img {
+            width: 100%;
+        }
+
+    /* затемняющий фон */
+    #overlay {
+        display: none;
+        background: #000;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0.5;
+        z-index: 9990;
+    }
+
+    /* кнопка закрытия */
+    #close-popup {
+        width: 30px;
+        height: 30px;
+        background: #FFFFFF;
+        border: 1px solid #AFAFAF;
+        border-radius: 15px;
+        cursor: pointer;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+
+        #close-popup i {
+            width: 30px;
+            height: 30px;
+            background: url(https://codernote.ru/files/cross.png) no-repeat center center;
+            background-size: 16px 16px;
+            display: block;
+        }
+
+    @@keyframes rota {
+        25% {
+            transform: rotate(360deg);
+        }
+    }
+
+    #close-popup:hover {
+        animation: rota 4s infinite normal;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+    }
+</style>
+<div class="psu-form">
+    <img src="~/Pictures/Vector.png" style="float:left;padding-right:10px;" />
+    POLOTSK<br />
+    STATE<br />
+    UNIVERSITY
+</div>
+<div class="txtPsu">
+    <img src="~/Pictures/Привет! Меня зовут PSUHelper.png" width="450" />
+</div>
 <div>
 
     @using (Ajax.BeginForm("HandleButtonClick", "Chat",
@@ -165,36 +278,25 @@
         },
     new { @class = "formStyle" }))
     {
-    <div style="height: 87% ! important; overflow:auto ! important;">
-        <p align="center" class="txtBoxStyle">@*@Model.First().BotResponse*@</p>
-        <div class="newDiv">
-            <button type="submit" name="mine" value="1" class="btnStyle">
-                <p class="btnTxt"> Поехали!!!!!!!@*@Model.First().UserRequest*@</p>
-            </button>
+
+        <div style="height: 87% ! important; overflow-y:auto ! important;overflow-x:hidden;">
+            <div class="newDiv">
+                <button type="submit" name="mine" value="1" class="btnStyle">
+                    <div class="btnTxt"> Поехали!!!!!!!@*@Model.First().UserRequest*@</div>
+                </button>
+            </div>
+            <div id="results"></div>
         </div>
-        <div id="results"></div>
-    </div>
-        @*<div style="height: 15% ! important;">
-            
-        </div>*@
         <div style="height: 13% ! important;">
 
             <button disabled class="pseudoSnd" height="50px" width="50px">
-                <svg width=30px height=30px viewBox="0 0 28 28" fill="none" xmlns="
-                     
-                     ://www.w3.org/2000/svg">
+                <svg width=30px height=30px viewBox="0 0 28 28" fill="none" xmlns="https://www.w3.org/2000/svg">
                     <path d="M26.5 1.5L17.75 26.5L12.75 15.25L1.5 10.25L26.5 1.5Z" stroke="#9163DD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
-                @*<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15.5 1.5L1.75 15.25" stroke="#9163DD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>*@
             </button>
             <textarea disabled class="newMsg" align="center">Введите сообщение...</textarea>
-            <button class="btnStyle" type="submit" name="mine" value="999"><p class="btnTxt">Home</p></button>
-        </div>
-
-    }
+            <button class="btnStyle" style="margin-top:10px;" type="submit" name="mine" value="999"><div class="btnTxt">Home</div></button>
+        </div>}
 </div>
-
 @Scripts.Render("~/scripts/jquery-3.4.1.min.js")
 @Scripts.Render("~/scripts/jquery.unobtrusive-ajax.min.js")

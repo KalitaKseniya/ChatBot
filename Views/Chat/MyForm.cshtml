@@ -1,18 +1,57 @@
 ﻿@model IEnumerable<ChatBot.Models.Chat>
 <div id="myresults">
 
-    <div class="newDivRight">
-        <p align="center" class="txtBoxStyleRequest">@ViewBag.NextSelected.UserRequest</p>
-    </div>
-    <p align="center" class="txtBoxStyleResponse">@ViewBag.NextSelected.BotResponse</p>
+    @if (ViewBag.NextSelected.UserRequest != null)
+    {
+<div class="newDivRight">
+    <div align="left" class="txtBoxStyleRequest">@ViewBag.NextSelected.UserRequest</div>
+</div>}
 
+    @if (ViewBag.NextSelected.BotResponse != " ")
+    {
+<div align="left" class="txtBoxStyleResponse">@Html.Raw(@ViewBag.NextSelected.BotResponse)</div> if (ViewBag.NextSelected.Id == 11)
+                {
+<div class="image__wrapper">
+    <img src="~/Pictures/cerificate.jpg" class="minimized" style="margin-left:20px" alt="клик для увеличения" />
+</div>}
+            }
     <div class="newDiv">
-        @foreach (var item in @Model)
+        @if (Model.Count() == 0)
         {
-            <button type="submit" name="mine" value=@item.Id class="btnStyle">
-                <p class="btnTxt">@item.UserRequest </p>
-            </button>
-        }
-       
+<button type="submit" name="mine" value="999" class="btnStyle">
+    <div class="btnTxt">Вернуться в главное меню</div>
+</button> }
+            else
+            {
+                foreach (var item in @Model)
+                {
+<button type="submit" name="mine" value=@item.Id class="btnStyle">
+    <div class="btnTxt">@item.UserRequest </div>
+</button>}
+            }
     </div>
 </div>
+
+
+@*@Scripts.Render("~/scripts/jquery-3.4.1.min.js")
+    @Scripts.Render("~/scripts/jquery.unobtrusive-ajax.min.js")*@
+
+<script>$(function () {
+        $('.minimized').click(function (event) {
+            var i_path = $(this).attr('src');
+            $('body').append('<div id="overlay"></div><div id="magnify"><img src="' + i_path + '"><div id="close-popup"><i></i></div></div>');
+            $('#magnify').css({
+                left: ($(document).width() - $('#magnify').outerWidth()) / 2,
+                // top: ($(document).height() - $('#magnify').outerHeight())/2 upd: 24.10.2016
+                top: ($(window).height() - $('#magnify').outerHeight()) / 2
+            });
+            $('#overlay, #magnify').fadeIn('fast');
+        });
+
+        $('body').on('click', '#close-popup, #overlay', function (event) {
+            event.preventDefault();
+            $('#overlay, #magnify').fadeOut('fast', function () {
+                $('#close-popup, #magnify, #overlay').remove();
+            });
+        });
+    });</script>

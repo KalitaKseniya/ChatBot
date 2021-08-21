@@ -33,7 +33,7 @@ namespace ChatBot.Controllers
         {
             int iMine = Int32.Parse(mine);//id database begins from 1 and in listts- from 0
             List<Chat> list = new List<Chat>();
-            if(iMine == 999)
+            if (iMine == 999)
             {
                 iMine = 1;
             }
@@ -42,23 +42,23 @@ namespace ChatBot.Controllers
             {
                 return PartialView("MyForm", list);
             }
-            var tmp = ViewBag.NextSelected.NextIDs.Split(',') ;
-            List<int> NextIds  = new List<int>();
-            foreach(var item in tmp)
+            var tmp = ViewBag.NextSelected.NextIDs.Split(',');
+            List<int> NextIds = new List<int>();
+            foreach (var item in tmp)
             {
                 NextIds.Add(Int32.Parse(item));
             }
-            foreach(var item in NextIds)
+            foreach (var item in NextIds)
             {
-                list.Add(myDB.Chats.ToList().Find(a => a.Id == item)) ; 
+                list.Add(myDB.Chats.ToList().Find(a => a.Id == item));
             }
-            if(mine =="999")
+            if (mine == "999")
             {
-                ViewBag.NextSelected.BotResponse = "Возвращаемся в главное меню!";
+                ViewBag.NextSelected.BotResponse = "Идем в главное меню!";
                 ViewBag.NextSelected.UserRequest = null;
 
             }
-           return PartialView("MyForm", list);
+            return PartialView("MyForm", list);
         }
     }
 }
